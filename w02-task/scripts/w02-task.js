@@ -26,7 +26,9 @@ foodElement.textContent = favoriteFoods;
 let newFood = "sweet potato casserole"
 favoriteFoods.push(newFood);
 foodElement.innerHTML += `<br>${favoriteFoods}`;
+
 favoriteFoods.shift();
 foodElement.innerHTML += `<br>${favoriteFoods}`;
+
 favoriteFoods.pop();
 foodElement.innerHTML += `<br>${favoriteFoods}`;
