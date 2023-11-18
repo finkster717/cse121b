@@ -32,3 +32,5 @@ foodElement.innerHTML += `<br>${favoriteFoods}`;
 
 favoriteFoods.pop();
 foodElement.innerHTML += `<br>${favoriteFoods}`;
+
+console.log(newFood);
