@@ -65,7 +65,7 @@ document.querySelector("#divideNumbers").addEventListener("click", divideNumbers
 function getTotalDue()
 {
     let subtotal = Number(document.querySelector("#subtotal").value);
-    const memberDiscount = .15;
+    const memberDiscount = .20;
     let total = subtotal;
     if (document.querySelector("#member").checked == true)
     {
@@ -75,7 +75,7 @@ function getTotalDue()
     {
         total = subtotal;
     }
-    document.querySelector("#total").textContent = total;
+    document.querySelector("#total").textContent = total.toFixed(2);
 }
 
 document.querySelector("#getTotal").addEventListener("click", getTotalDue)
