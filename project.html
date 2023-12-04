@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b | Final Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="w01-task.html">W1 Task</a></li>
+            <li><a href="w03-task.html">W3 Task</a></li>
+            <li><a href="w04-task.html">W4 Task</a></li>
+            <li><a href="w05-task.html">W5 Task</a></li>
+            <li><a href="project.html" class="active">Project</a></li>
+        </ul>
+    </nav>>
+    <header>
+        <h1>Handgun Categorizer</h1>
+    </header>
+    <main id="gridly">
+        <h2>Please Select Your New Handgun's Intended Use</h2>
+        <p id="disclaimer">These are simply a few recommendations based on how comfortable each handgun is to carry based on dimensions, this is subjective and your mileage may vary. Please visit your local gun store and handle the firearms you are interested in before making a purchase.</p>
+    
+        <select id="sortHandguns" title="Choose a data filter.">
+            <option value="" disabled selected>Filter Handguns</option>
+            <option value="concealedCarry">Concealed Carry</option>
+            <option value="openCarry">Open Carry & Home Defense</option>
+            <option value="all">No Filter</option>
+        </select>
+    
+        <div id="handguns">
+        </div>
+    </main>
+    
+    <footer>
+        &copy;<span id="year"></span> | CSE 121b | Final Project
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/project.js"></script>
+</body>
+</html>
