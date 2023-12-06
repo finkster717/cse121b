@@ -8,21 +8,33 @@ const displayHandguns = (handgunList) => {
         const article = document.createElement("article");
 
         const h3 = document.createElement("h3");
-        const p = document.createElement("p");
+        const img = document.createElement("img");
+        const height = document.createElement("ul");
+        const length = document.createElement("ul");
+        const width = document.createElement("ul");
+        const weight = document.createElement("ul");
+
         h3.textContent = handgun.name;
-        p.textContent = `${handgun.height} x ${handgun.length} x ${handgun.width}`;
-        p.textContent += ` | Weight: ${handgun.weight}`;
-        p.textContent += ` | Source: ${handgun.source}`;
+        img.src = handgun.image;
+        img.alt = handgun.id;
+        height.innerHTML = `<strong>Height: </strong>${handgun.height}`;
+        length.innerHTML = `<strong>Length: </strong>${handgun.length}`;
+        width.innerHTML = `<strong>Width: </strong>${handgun.width}`;
+        weight.innerHTML = `<strong>Weight: </strong>${handgun.weight}`;
 
         article.appendChild(h3);
-        article.appendChild(p);
+        article.appendChild(img);
+        article.appendChild(height);
+        article.appendChild(length);
+        article.appendChild(width);
+        article.appendChild(weight);
         handgunsElement.appendChild(article);
     });
 };
 
 // declaring function to get data for handgunList from api created by yours truly
 const getHandguns = async () => {
-    const response = await fetch("https://run.mocky.io/v3/c8f784cf-4dd4-479e-9bf6-efc75e0e82b9");
+    const response = await fetch("https://run.mocky.io/v3/6e606a5c-2ba1-4ba7-a28f-5c19b0497806");
     const data = await response.json();
     handgunList = data;
 
