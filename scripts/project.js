@@ -61,7 +61,7 @@ function filterHandguns(handguns) {
             function sortByHeight(handguns) {
                 return handguns.sort((a, b) => parseFloat(a.height) - parseFloat(b.height));
             };
-            // declaring function to prioritize handguns with width less than 1.21 inches, another important factor in concealed carry
+            // declaring function to prioritize thinner handguns, another important factor in concealed carry
             function prioritizeCCW(handguns) {
                 return handguns.sort((a, b) => {
                     if (parseFloat(a.width) < 1.21 && parseFloat(b.width) >= 1.21) {
